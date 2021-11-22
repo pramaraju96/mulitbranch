@@ -28,7 +28,7 @@ pipeline {
 				echo 'dev branch deployment ...'
 				snDevOpsStep()
 				
-				sleep 5
+				sleep 15
 			}
 		}
 		stage('Deploy for production') {
