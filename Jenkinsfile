@@ -27,7 +27,7 @@ pipeline {
 				echo 'dev branch deployment...'
 				snDevOpsStep()
 				snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "development_artifact.jar","version": "1.1","semanticVersion": "1.1.0","repositoryName": "multibranch"}],"stageName": "Deploy for development"}""")
-				sleep 25
+				sleep 15
 			}
 		}
 		stage('Deploy for production') {
