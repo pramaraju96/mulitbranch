@@ -8,7 +8,7 @@ pipeline {
 			steps {
 				echo 'build ...'
 				snDevOpsStep()
-				sleep 5
+				sleep 15
 			}
 		}
 		stage('test') {
