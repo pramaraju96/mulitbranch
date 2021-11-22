@@ -1,3 +1,7 @@
+def semanticVersion = "${env.BUILD_NUMBER}.0.0"
+def packageName = "devops_pipeline_demo_${env.BUILD_NUMBER}"
+def version = "${env.BUILD_NUMBER}.0"
+
 pipeline {
 	agent any
 	tools {
@@ -15,7 +19,7 @@ pipeline {
 			steps {
 				echo 'test..'
 				snDevOpsStep()
-				snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "qa_artifact.jar","version": "1.1","semanticVersion": "1.1.0","repositoryName": "multibranch"}],"stageName": "test"}""")
+				snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "qa_artifact.jar","version": "1.${env.BUILD_NUMBER}","semanticVersion": "1.${env.BUILD_NUMBER}.0","repositoryName": "multibranch"}],"stageName": "test"}""")
 				sleep 15
 				//snDevOpsChange()
 			}
