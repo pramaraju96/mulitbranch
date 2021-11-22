@@ -15,7 +15,7 @@ pipeline {
 			steps {
 				echo 'test.'
 				snDevOpsStep()
-				sleep 5
+				sleep 15
 				//snDevOpsChange()
 			}
 		}
