@@ -10,7 +10,7 @@ pipeline {
 	stages {
 		stage('build') {
 			steps {
-				echo 'build ...'
+				echo 'build...'
 				snDevOpsStep()
 				sleep 15
 			}
