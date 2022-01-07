@@ -17,7 +17,7 @@ pipeline {
 		}
 		stage('test') {
 			steps {
-				echo 'test..'
+				echo 'test....'
 				snDevOpsStep()
 				snDevOpsArtifact(artifactsPayload:"""{"artifacts": [{"name": "qa_artifact.jar","version": "1.${env.BUILD_NUMBER}","semanticVersion": "1.${env.BUILD_NUMBER}.0","repositoryName": "multibranch"}],"stageName": "test"}""")
 				sleep 15
